@@ -1,0 +1,22 @@
+{
+  "name": "wordle",
+  "version": "1.0.0",
+  "description": "creating wordle with 4 letters ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/git-it-dunn/webdevfinal.git"
+  },
+  "author": "jacob turner",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/git-it-dunn/webdevfinal/issues"
+  },
+  "homepage": "https://github.com/git-it-dunn/webdevfinal#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
