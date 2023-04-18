@@ -27,8 +27,8 @@ app.get('/', (req, res) => {
     res.sendFile(__dirname + '/html/mainpage.html');
 });
 
-app.get('/scripts/game.js', (req, res) => {
-    res.sendFile(__dirname + '/scripts/game.js');
+app.get('/scripts/maingamepage.js', (req, res) => {
+    res.sendFile(__dirname + '/scripts/maingamepage.js');
 });
 
 app.get('/scripts/wordpull.js', (req, res) => {
