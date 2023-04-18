@@ -1,7 +1,7 @@
 window.onload = function(){
     let word = "word";
     for (let i = 0; i < 4; i++){
-        let wordle = document.createElement("input");
+        let wordle = document.createElement("div");
         wordle.id = i;
         wordle.innerText = word[i]
         wordle.classList.add("letter")
