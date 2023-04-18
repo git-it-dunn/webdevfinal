@@ -2,7 +2,7 @@
 let express = require('express');
 
 // Import a local .js file
-// let my_module = require('./localfile.js')
+// let my_module = require('scripts/game.js')
 
 // Instantiate express application
 let app = express();
@@ -22,5 +22,5 @@ app.listen(app.get('port'), function () {
 
 // Setup our homepage - localhost:3000 now returns this message
 app.get('/', (req, res) => {
-    res.sendFile(__dirname + '/html/mainpage.html');
+    res.sendFile(__dirname + 'html/mainpage.html');
 });
