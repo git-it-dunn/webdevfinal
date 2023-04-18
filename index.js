@@ -35,6 +35,18 @@ app.get('/scripts/wordpull.js', (req, res) => {
     res.sendFile(__dirname + '/scripts/wordpull.js');
 });
 
+app.get('/scripts/mainpage.js', (req, res) => {
+    res.sendFile(__dirname + '/scripts/mainpage.js');
+});
+
 app.get('/stylesheets/mainpage.css', (req, res) => {
     res.sendFile(__dirname + '/stylesheets/mainpage.css');
+});
+
+app.get('/html/wordsPage.html', (req, res) => {
+    res.sendFile(__dirname + '/html/wordsPage.html');
+});
+
+app.get('/html/mainpage.html', (req, res) => {
+    res.sendFile(__dirname + '/html/mainpage.html');
 });
