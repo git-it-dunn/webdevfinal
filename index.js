@@ -50,3 +50,7 @@ app.get('/html/wordsPage.html', (req, res) => {
 app.get('/html/mainpage.html', (req, res) => {
     res.sendFile(__dirname + '/html/mainpage.html');
 });
+
+app.get('/html/stats.html', (req, res) => {
+    res.sendFile(__dirname + '/html/stats.html');
+});
