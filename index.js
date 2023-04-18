@@ -2,7 +2,9 @@
 let express = require('express');
 
 // Import a local .js file
-// let my_module = require('scripts/game.js')
+//let my_module1 = require('./scripts/game.js')
+//let my_module2 = require('./scripts/wordpull.js')
+//let my_module3 = require('./scripts/mainpage.js')
 
 // Instantiate express application
 let app = express();
@@ -22,5 +24,17 @@ app.listen(app.get('port'), function () {
 
 // Setup our homepage - localhost:3000 now returns this message
 app.get('/', (req, res) => {
-    res.sendFile(__dirname + 'html/mainpage.html');
+    res.sendFile(__dirname + '/html/mainpage.html');
+});
+
+app.get('/scripts/game.js', (req, res) => {
+    res.sendFile(__dirname + '/scripts/game.js');
+});
+
+app.get('/scripts/wordpull.js', (req, res) => {
+    res.sendFile(__dirname + '/scripts/wordpull.js');
+});
+
+app.get('/stylesheets/mainpage.css', (req, res) => {
+    res.sendFile(__dirname + '/stylesheets/mainpage.css');
 });
