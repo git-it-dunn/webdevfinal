@@ -13,6 +13,8 @@ let app = express();
 //     console.log(`Listening for requests on port 3000.`);
 // });
 
+//i love APIs so much
+var unirest = require('unirest');
 
 // Use environment variable specified at command line, or if none provided, 3000 default
 app.set('port', process.env.PORT || 3000);
