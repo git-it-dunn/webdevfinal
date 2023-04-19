@@ -14,8 +14,8 @@
     <script src="https://d3js.org/d3.v7.min.js"></script>
     <title>Document</title>
 </head>
-<body>
-    <nav class="navbar" role="navigation" aria-label="main navigation">
+<body onload="main()">
+    <nav class="navbar is-transparent" role="navigation" aria-label="main navigation">
         <div class="navbar-brand">
           <a class="navbar-item" href="https://bulma.io">
             <img src="https://ae01.alicdn.com/kf/HTB1cMumSFXXXXbbXVXXq6xXFXXXF/Wholesale-10cm-High-Wood-Wooden-Letters-A-to-Z-Alphabet-Birthday-Gift-Bridal-Wedding-Party-Home.jpg_640x640.jpg" width="112" height="28">
@@ -48,6 +48,47 @@
           </div>
         </div>
       </nav>
-      <div id="BarGraph"></div>
+
+      <div class="box">
+        Here are your stats. Each colour represents a win, loss, and total games played. After a few games, check back in to see its changes!
+      </div>
+
+      <!-- <div id="BarGraph"></div> -->
+      <svg width = "600" height="200"></svg>
 </body>
 </html>
+
+<script>
+  //javascript function for the D3 implementation of the pie char
+  function main() {
+    //data[] is the collection of wins, losses, and games played
+    var wins = 8;
+    var losses = 4;
+    var gamesPlayed = wins + losses;
+    var data = [wins,losses,gamesPlayed]
+    var svg = d3.select("svg"),
+    width = svg.attr('width'),
+    height = svg.attr('height'),
+    radius = Math.min(width, height) / 2
+    
+    var g = svg.append('g')
+      .attr('transform', 'translate('+ width / 2 + ',' + height / 2 + ')');
+
+    //these colours need to be changed
+    var color = d3.scaleOrdinal(['#e40303','#ff8c44', '#ffef30',])
+    var pie = d3.pie();
+    var arc = d3.arc()
+        .innerRadius(0)
+        .outerRadius(radius);
+    var arcs = g.selectAll('arc')
+        .data(pie(data))
+        .enter().append('g')
+        .attr('class','arc')
+    
+    arcs.append('path')
+      .attr('fill',function(d, i){
+        return color(i)
+      })
+      .attr('d', arc);
+  }
+</script>
