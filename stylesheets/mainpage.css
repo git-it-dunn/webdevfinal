@@ -1,9 +1,11 @@
 body{
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
+    font-weight: bold;
 }
 h1{
     font-size:xx-large;
+    font-family: 'Times New Roman', Times, serif;
 }
 #theWord{
     width: 300px;
@@ -13,12 +15,34 @@ h1{
     flex-wrap: wrap;
 }
 
+#keyboard {
+    width: 1000px;
+    height: 200px;
+
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.inputButtonLetters{
+    width: 144px; 
+    height: 70px;
+
+    font-size: 20px;
+
+    border: 1px solid black;
+    margin: 2px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .letter {
     width: 70px; 
     height: 70px;
 
     font-size: 20px;
-    font-weight: bold;
 
     border: 1px solid black;
     margin: 2px;
