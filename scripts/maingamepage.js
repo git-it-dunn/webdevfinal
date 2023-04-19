@@ -34,6 +34,16 @@ function makingWordlboxes(){
         let wordle = document.createElement("div");
         wordle.id = i;
         wordle.innerText = word[i];
+        console.log(wordle.innerText[0])
+        wordle.classList.add("letter");
+        document.getElementById("theWord").appendChild(wordle);
+    }
+
+    for (let i = 0; i < 4; i++){
+        let wordle = document.createElement("div");
+        wordle.id = i;
+        wordle.innerText = word[i];
+        console.log(wordle.innerText[0])
         wordle.classList.add("letter");
         document.getElementById("theWord").appendChild(wordle);
     }
