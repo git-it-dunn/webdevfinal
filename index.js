@@ -56,3 +56,7 @@ app.get('/html/mainpage.html', (req, res) => {
 app.get('/html/stats.html', (req, res) => {
     res.sendFile(__dirname + '/html/stats.html');
 });
+
+app.get('/html/group_members.html', (req, res) => {
+    res.sendFile(__dirname + '/html/group_members.html');
+});
