@@ -15,8 +15,8 @@ function dictionarypull(a){
     $.get("https://api.dictionaryapi.dev/api/v2/entries/en/"+a, function(b){
         var mean = b[0].meanings;
         var defs = mean[0].definitions;
-        var def = defs.definition;
-        var ex = defs.example;
-        document.getElementById('dict').innerHTML = "<br> <p>Definition: "+defs.definition+"</p> <br> <br> <p>Example use: "+defs.example+"</p> <br>";
+        var def = defs[0].definition;
+        var ex = defs[0].example;
+        document.getElementById('dict').innerHTML = "<br> <p>Definition: "+JSON.stringify(def)+"</p> <br>";
     });
 }
