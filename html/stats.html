@@ -1,3 +1,6 @@
+<!-- This file will create the stats page. -->
+<!-- It will have stats on wins vs losses as well as how many tries it takes for each game -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,7 +10,8 @@
     <script type="text/javascript" src="../scripts/wordpull.js"></script>
     <script type="text/javascript" src="../scripts/game.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-    <link rel="stylesheet" href="stylesheets/mainpage.css" />
+    <link rel="stylesheet" href="../stylesheets/mainpage.css" />
+    <script src="https://d3js.org/d3.v7.min.js"></script>
     <title>Document</title>
 </head>
 <body>
@@ -23,10 +27,6 @@
             <span aria-hidden="true"></span>
           </a>
         </div>
-        
-        <div>
-          <input id="gamesWord" type="text">
-        </div> 
 
         <div id="navbarBasicExample" class="navbar-menu">
           <div class="navbar-start">
@@ -41,8 +41,13 @@
             <a class="navbar-item" href="../html/stats.html">
                 Stats
             </a>
+
+            <a class="navbar-item" href="../html/group_members.html">
+              About Us
+          </a>
           </div>
         </div>
       </nav>
+      <div id="BarGraph"></div>
 </body>
 </html>
