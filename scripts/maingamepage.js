@@ -1,10 +1,14 @@
 let word = "WORD";
-var lSel = null;
+let gW = "    ";
+var lSel;
 
-let keys = "Q,W,E,R,T,Y,U,I,O,P,A,S,D,F,G,H,J,K,L,Z,X,C,V,B,N,M,Enter".split(',');
+var box1,box2,box3,box4;
+
+let keys = "Q,W,E,R,T,Y,U,I,O,P,A,S,D,F,G,H,J,K,L,Z,X,C,V,B,N,M, ".split(',');
 let numFail = 0;
 
 window.onload = function(){
+    document.getElementById("Fail").innerText = numFail;
     makingWordlboxes();
     makingKeyboard();
 }
@@ -24,13 +28,13 @@ function makingKeyboard(){
 }
 
 function makingWordlboxes(){
-    for (let i = 0; i < 4; i++){
-        let wordle = document.createElement("div");
-        wordle.id = i;
-        // wordle.innerText = word[i];
-        wordle.classList.add("letter");
-        document.getElementById("theWord").appendChild(wordle);
-    }
+    // for (let i = 0; i < 4; i++){
+    //     let wordle = document.createElement("div");
+    //     wordle.id = i;
+    //     wordle.innerText = word[i];
+    //     wordle.classList.add("letter");
+    //     document.getElementById("theWord").appendChild(wordle);
+    // }
 
     for (let j = 0; j < 4; j++){
         let worl = document.createElement("div");
@@ -43,20 +47,34 @@ function makingWordlboxes(){
 
 
 function select() {
-    if (lSel && lSel.id != (keys.length-1)) {
-        this.innerText = keys[lSel.id]; 
+    console.log("this.is:"+ this.id);
+    console.log("lSel.id:"+ lSel.id);
+    if (word[this.id] == keys[lSel.id] || keys[lSel.id] == " ") {
+        this.innerText = keys[lSel.id];
+        gW.replaceAt(this.id, keys[lSel.id]);
+        console.log(gW);
+        if(gW == word){
+            console.log("pp");
+        }
+    }else if (word[this.id] != keys[lSel.id]){
+        numFail++;
+        this.innerText = keys[lSel.id];
+        document.getElementById("Fail").innerText = numFail;
     }
+    // if (lSel && lSel.id != (keys.length-1)) {
+    //     this.innerText = keys[lSel.id]; 
+    // }
 }
 
 function letterSel(){
     if (lSel) {
         lSel.classList.remove("letterSelect");
-    }
+    }   
     lSel = this;
-    if(lSel.id == (keys.length-1)){
-
-    }else if(lSel.id != (keys.length-1)){
-        lSel.classList.add("letterSelect");
-        console.log("wordle.id");
-    }
+    lSel.classList.add("letterSelect");
+    // if(lSel.id == (keys.length-1)){
+        
+    // }else if(lSel.id != (keys.length-1)){
+    //     lSel.classList.add("letterSelect");
+    // }
 }
