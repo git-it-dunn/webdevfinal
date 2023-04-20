@@ -47,6 +47,10 @@
             <a class="navbar-item" href="../html/group_members.html">
               About Us
           </a>
+
+          <a class="navbar-item" href="../other_game/other_game.html">
+            Aim Trainer Minigame!
+          </a>
           </div>
         </div>
       </nav>
@@ -55,43 +59,39 @@
       <div class="box">
         Here are your stats. Blue is equal to the average amount of tries it takes players and the Red is equal to the total tries. After a few games, check back in to see its changes!
       </div>
-
-      <!-- <div id="BarGraph"></div> -->
-      <svg width = "600" height="200"></svg>
+      <svg width = "550" height="200"></svg>
 </body>
 </html>
 
 <script>
-  //javascript function for the D3 implementation of the pie char
+  //javascript function for the D3 implementation of the pie chart
   function main() {
     //data[] is the collection of wins, losses, and games played
     var avg = 19;
     var numFail = 15;
-    console.log(numFail)
     var data = [avg, numFail]
     var svg = d3.select("svg"),
-    width = svg.attr('width'),
+    //get height and width
     height = svg.attr('height'),
-    radius = Math.min(width, height) / 2
-    
-    var g = svg.append('g')
-      .attr('transform', 'translate('+ width / 2 + ',' + height / 2 + ')');
-
-    //these colours need to be changed
-    var color = d3.scaleOrdinal(['#0000FF','#FF0000'])
+    width = svg.attr('width'),
+    //make the circle
+    radius = Math.min(width, height)/2
+    var g = svg.append("g").attr("transform", "translate("+width/2 + "," + height/2 + ")");
+    //these colours are red and blue
+    var colour = d3.scaleOrdinal(['#0000FF','#FF0000'])
     var pie = d3.pie();
     var arc = d3.arc()
         .innerRadius(0)
         .outerRadius(radius);
-    var arcs = g.selectAll('arc')
+
+    var chartArcs = g.selectAll('arc')
         .data(pie(data))
         .enter().append('g')
         .attr('class','arc')
     
-    arcs.append('path')
+    chartArcs.append('path')
       .attr('fill',function(d, i){
-        return color(i)
-      })
-      .attr('d', arc);
+        return colour(i)
+      }).attr('d', arc);
   }
 </script>
