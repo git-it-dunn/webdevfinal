@@ -1,8 +1,8 @@
-var fileDataObject = $.csv.toObjects('../Words.csv')
+var fileDataObject = $.csv.toObjects('../Words.csv');
 
-var fileData = Object.values(fileDataObject)
+var fileData = Object.values(fileDataObject);
 
-console.log(fileData)
+console.log(fileData);
 //this function is called at the start of the body section in wordsPage.html using onLoad="makeTable()"
 //it doesnt work yet
 //it needs to read Words.csv and populate the table with those words
@@ -22,5 +22,7 @@ function makeTable(){
         }
         tbody.appendChild(row);
     }
-    document.getElementById("thetable").appendChild(table); 
+    
+    table.appendChild(tbody);
+    document.body.appendChild(table);
 }

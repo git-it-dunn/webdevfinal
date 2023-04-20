@@ -67,6 +67,10 @@ app.get('/stylesheets/login.css', (req, res) => {
     res.sendFile(__dirname + '/stylesheets/login.css');
 });
 
+app.get('/stylesheets/wordTable.css', (req, res) => {
+    res.sendFile(__dirname + '/stylesheets/wordTable.css');
+});
+
 app.get('/html/wordsPage.html', (req, res) => {
     res.sendFile(__dirname + '/html/wordsPage.html');
 });
