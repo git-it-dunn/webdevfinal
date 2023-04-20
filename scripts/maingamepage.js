@@ -96,13 +96,4 @@ function letterSel(){
     }   
     lSel = this;
     lSel.classList.add("letterSelect");
-    // if(lSel.id == (keys.length-1)){
-        
-    // }else if(lSel.id != (keys.length-1)){
-    //     lSel.classList.add("letterSelect");
-    // }
-}
-
-function togglePopup(){
-    document.getElementById("popup-1").classList.toggle("active");
 }
