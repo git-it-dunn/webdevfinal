@@ -15,7 +15,21 @@ window.onload = function(){
     document.getElementById("Fail").innerText = numFail;
     makingWordlboxes();
     makingKeyboard();
-    togglePopup()
+    togglePopup();
+    getRandomWord();
+}
+
+
+
+function getRandomWord(){
+    var wordList = ["Also","Able","Acid","Aged","Away","Baby","Back","Bake",
+    "Bank","Been","Ball","Base","Busy","Beam","Bend","Best","Bell","Bird","Come","Came",
+    "Calm","Card","Coat","City","Chat","Cash","Crow","Cook","Cool","Cute"];
+
+    let randomWordNumber = Math.floor((Math.random() * 30) + 1);
+    console.log("random number is: " + randomWordNumber);
+
+    console.log(wordList[randomWordNumber]);
 }
 
 
