@@ -132,11 +132,11 @@ function letterSel(){
 }
 
 function togglePopup(){
-    document.getElementById("popup-1").classList.toggle("active");
+    document.getElementById("popup1").classList.toggle("active");
 }
 
 function togglePopup2(){
-    document.getElementById("popup-2").classList.toggle("active");
+    document.getElementById("popup2").classList.toggle("active");
 }
 
 function togglePopup3(){
