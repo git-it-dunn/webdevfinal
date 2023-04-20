@@ -11,6 +11,7 @@ let keys = "Q,W,E,R,T,Y,U,I,O,P,A,S,D,F,G,H,J,K,L,Z,X,C,V,B,N,M, ".split(',');
 let numFail = 0;
 
 window.onload = function(){
+    //auto mainpage creation
     document.getElementById("Fail").innerText = numFail;
     makingWordlboxes();
     makingKeyboard();
@@ -44,8 +45,11 @@ function makingWordlboxes(){
 
 
 function select() {
-    console.log("this.is:"+ this.id);
-    console.log("lSel.id:"+ lSel.id);
+    // allows you to click on the four boxes you want to fill with the word
+    // will add 1 to numFail if you add the wrong letter to the box
+    // if letter is in the correct spot it will set that that letter
+    // is correct and if you get them all correct you will get a pop up 
+    // saying you win
     if (word[this.id] == keys[lSel.id] || keys[lSel.id] == " ") {
         this.innerText = keys[lSel.id];
         if(this.id == 0){
@@ -92,6 +96,7 @@ function select() {
 }
 
 function letterSel(){
+    //allows you to pick from the letters in the keyboard at the bottom of your screen
     if (lSel) {
         lSel.classList.remove("letterSelect");
     }   
