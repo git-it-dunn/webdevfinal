@@ -9,6 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script type="text/javascript" src="../scripts/wordpull.js"></script>
     <script type="text/javascript" src="../scripts/game.js"></script>
+    <script type="text/javascript" src="../scripts/maingamepage.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
     <link rel="stylesheet" href="../stylesheets/mainpage.css" />
     <script src="https://d3js.org/d3.v7.min.js"></script>
@@ -63,9 +64,9 @@
 <script>
   //javascript function for the D3 implementation of the pie char
   function main() {
-    //data[] is the collection of wins, losses, and games played
-    var wins = 8;
-    var losses = 4;
+    //data[] is the collection of average player fails, fails
+    var wins = 24;
+    var Fails = numFail;
     var gamesPlayed = wins + losses;
     var data = [wins,losses,gamesPlayed]
     var svg = d3.select("svg"),
