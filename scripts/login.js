@@ -1,25 +1,14 @@
-function login(page) {
-    var userName = page.Username.value;
-    var password = page.Password.value;
-    var xmlHttpRequest = new XMLHttpRequest();
+//login functionality (not working & not finished)
 
-    xmlHttpRequest.open("post", "login", true);
-
-    xmlHttpRequest.onreadystatechange = function () {
-        if (xmlHttpRequest.readyState == 4 && xmlHttpRequest.status == 200) {
-            loginResults();
-        }
-    }
-}
-
+//posts request to server and recieves response
 app.post('/login', (req, res) => {
     let username = req.body.formRow.Username;
     let password = req.body.formRow.Password;
 
-    if (username === 'user' && password === 'user') {
-        res.send('Login successful');
+    if (username != 'test' && password != 'test') {
+        res.send('Login Failed');
     }
     else {
-        res.send('Login failed');
+        res.send('Login Success');
     }
 })

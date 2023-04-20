@@ -1,4 +1,4 @@
-// //setup for mongodb database
+// //setup for mongodb database (given when a database is created on the website)
 // const { MongoClient, ServerApiVersion } = require('mongodb');
 // const uri = "mongodb+srv://admin:xRPEQom9cQb9DfGW@worl-cluster.qpg19ho.mongodb.net/?retryWrites=true&w=majority";
 // // Create a MongoClient with a MongoClientOptions object to set the Stable API version
@@ -9,6 +9,8 @@
 //     deprecationErrors: true,
 //   }
 // });
+
+// ^ setup is unfinished as the login functionality needed to be completed in order to use the database
 
 // Import express. Supported by Node.js, lets us include modules in our project.
 let express = require('express');
