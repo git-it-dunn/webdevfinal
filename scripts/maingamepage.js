@@ -65,6 +65,7 @@ function select() {
 
         if(l1 && l2 && l3 && l4){
             togglePopup2()
+            dictionarypull(word)
             console.log("Winner Winner Chicken Dinner");
         }
 
