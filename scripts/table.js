@@ -1,24 +1,25 @@
-var fileDataObject = $.csv.toObjects('../Words.csv');
+var wordList = ["Also","Able","Acid","Aged","Away","Baby","Back","Bake",
+    "Bank","Been","Ball","Base","Busy","Beam","Bend","Best","Bell","Bird","Come","Came",
+    "Calm","Card","Coat","City","Chat","Cash","Crow","Cook","Cool", "Cute"];
 
-var fileData = Object.values(fileDataObject);
-
-console.log(fileData);
 //this function is called at the start of the body section in wordsPage.html using onLoad="makeTable()"
 //it doesnt work yet
 //it needs to read Words.csv and populate the table with those words
 function makeTable(){
     var table = document.createElement("table");
     var tbody = document.createElement("tbody");
+    var wordCount = 0;
 
     table.appendChild(tbody);
 
-    for (i = 1; i <= 6; i++) {
+    for (i = 0; i <= 5; i++) {
         var row = document.createElement("tr");
-        for (j = 1; j <= 5; j++) {
+        for (j = 0; j <= 4; j++) {
             const td = document.createElement("td");
-            var data = document.createTextNode("Row " + i + ", Column " + j);
+            var data = document.createTextNode(wordList[wordCount]);
             td.appendChild(data);
             row.appendChild(td);
+            wordCount++;
         }
         tbody.appendChild(row);
     }
