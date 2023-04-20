@@ -12,48 +12,47 @@
 </head>
 <body>
   <!-- added "is-transparent" to the class, getting rid of ugly white box around button when hovering with mouse -->
+
+  <section class="hero is-success">
     <nav class="navbar is-transparent" role="navigation" aria-label="main navigation">
-        <div class="navbar-brand">
-          <a class="navbar-item" href="https://bulma.io">
-            <img src="https://ae01.alicdn.com/kf/HTB1cMumSFXXXXbbXVXXq6xXFXXXF/Wholesale-10cm-High-Wood-Wooden-Letters-A-to-Z-Alphabet-Birthday-Gift-Bridal-Wedding-Party-Home.jpg_640x640.jpg" width="112" height="28">
+      <div class="navbar-brand">
+        <a class="navbar-item" href="https://bulma.io">
+          <img src="https://ae01.alicdn.com/kf/HTB1cMumSFXXXXbbXVXXq6xXFXXXF/Wholesale-10cm-High-Wood-Wooden-Letters-A-to-Z-Alphabet-Birthday-Gift-Bridal-Wedding-Party-Home.jpg_640x640.jpg" width="112" height="28">
+        </a>
+    
+        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+      </div>
+
+      <div id="navbarBasicExample" class="navbar-menu">
+        <div class="navbar-start">
+          <a class="navbar-item" href="../html/mainpage.html">
+              Home
           </a>
-      
-          <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
+    
+          <a class="navbar-item" href="../html/wordsPage.html">
+              Word List
           </a>
+
+          <a class="navbar-item" href="../html/stats.html">
+              Stats
+          </a>
+
+          <a class="navbar-item" href="../html/group_members.html">
+            About Us
+        </a>
         </div>
-
-        <div id="navbarBasicExample" class="navbar-menu">
-          <div class="navbar-start">
-            <a class="navbar-item" href="../html/mainpage.html">
-                Home
-            </a>
+      </div>
+    </nav>
+  </section>
       
-            <a class="navbar-item" href="../html/wordsPage.html">
-                Word List
-            </a>
-
-            <a class="navbar-item" href="../html/stats.html">
-                Stats
-            </a>
-
-            <a class="navbar-item" href="../html/group_members.html">
-              About Us
-          </a>
-          </div>
-        </div>
-      </nav>
-
-      <hr>
-
       <svg width="100" height="100">
         <circle cx="50" cy="50" r="35" stroke="green" stroke-width="8" />
       </svg>
-
       <h1>Worl</h1>
-
       <hr>
       
       <h2 id="Fail"></h2>
@@ -73,11 +72,23 @@
       </div>
       <button onclick="togglePopup()">Popup button</button>
 
+      <div class="popup" id="popup-2">
+        <div class="overlay" onclick="togglePopup()"></div>
+        <div class="content">
+          <div class="close-btn">&times;</div>
+          <h1>Welcome!</h1>
+          <p>
+            You Won!
+          </p>
+        </div>
+      </div>
+      <button onclick="togglePopup()">Popup button</button>
+
 </body>
 <footer class="footer">
   <div class="content has-text-centered">
     <p>
-      Lets play World! (this is a footer for project / class info maybe)
+      Lets play Worl! (this is a footer for project / class info maybe)
     </p>
   </div>
 </footer>

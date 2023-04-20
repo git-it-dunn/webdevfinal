@@ -14,6 +14,7 @@ window.onload = function(){
     document.getElementById("Fail").innerText = numFail;
     makingWordlboxes();
     makingKeyboard();
+    togglePopup()
 }
 
 
@@ -63,8 +64,8 @@ function select() {
         console.log(l4);
 
         if(l1 && l2 && l3 && l4){
-            //Win
-            console.log("pp");
+            togglePopup2()
+            console.log("Winner Winner Chicken Dinner");
         }
 
 
@@ -105,4 +106,8 @@ function letterSel(){
 
 function togglePopup(){
     document.getElementById("popup-1").classList.toggle("active");
+}
+
+function togglePopup2(){
+    document.getElementById("popup-2").classList.toggle("active");
 }
