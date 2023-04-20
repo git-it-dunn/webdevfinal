@@ -55,6 +55,10 @@ app.get('/scripts/mainpage.js', (req, res) => {
     res.sendFile(__dirname + '/scripts/mainpage.js');
 });
 
+app.get('/scripts/table.js', (req, res) => {
+    res.sendFile(__dirname + '/scripts/table.js');
+});
+
 app.get('/stylesheets/mainpage.css', (req, res) => {
     res.sendFile(__dirname + '/stylesheets/mainpage.css');
 });
