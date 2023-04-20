@@ -118,6 +118,7 @@ h2{
 
 footer{
     bottom: 0;
+    height: 10px;
     width: 100%;
-    position: absolute;
+    position: relative;
 }
