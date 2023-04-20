@@ -7,9 +7,25 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
     <link rel="stylesheet" href="../stylesheets/mainpage.css" />
     <link rel="stylesheet" href="../stylesheets/login.css" />
+    <script rel="script" href="../scripts/login.js" />
     <title>Document</title>
 </head>
 <body>
-    
+    <center>
+        <form id="login" action="/login">
+            <h1>Login</h1>
+            <div class="formRow">
+                <label for="Username">Username:</label>
+                <input type="text" id="Username" name="Username">
+            </div>
+            <div class="formRow">
+                <label for="Password">Password:</label>
+                <input type="password" id="Password" name="Password">
+            </div>
+            <div class="formRow" id="loginButton">
+                <input type="submit" value="Login">
+            </div>
+        </form>
+    </center>
 </body>
 </html>
