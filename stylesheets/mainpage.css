@@ -118,7 +118,8 @@ h2{
 
 footer{
     bottom: 0;
-    height: 10px;
+    height: 1px;
     width: 100%;
     position: relative;
+    font-size: 1px;
 }

@@ -102,6 +102,10 @@ function select() {
         }else if(this.id == 3){
             l4 = Boolean(false);
         }
+        if(numFail == 20){
+            togglePopup3()
+            console.log("You Lose!");
+        }
 
         console.log(l1);
         console.log(l2);
@@ -133,4 +137,8 @@ function togglePopup(){
 
 function togglePopup2(){
     document.getElementById("popup-2").classList.toggle("active");
+}
+
+function togglePopup3(){
+    document.getElementById("popup3").classList.toggle("active");
 }

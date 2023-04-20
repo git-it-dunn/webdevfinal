@@ -75,7 +75,7 @@
             <br>
             You will try to guess the randomly chosen word in as little tries as possible. You will guess the random word letter by letter. To guess a letter within the word,
             select the letter from the table below then click where you think it will go in the word in one of the four squares. If you get the guessed letter wrong, your incorrect
-            guess number will increase. If you can get all four letters right, you win. Click anywhere off this popup to play!
+            guess number will increase, if you get over 20 you lose. If you can get all four letters right, you win. Click anywhere off this popup to play!
 
           </p>
         </div>
@@ -95,14 +95,15 @@
         </div>
       </div>
 
+      <div class="popup" id="popup3">
+        <div class="overlay" onclick="togglePopup()"></div>
+        <div class="content">
+          <h1>You Lose!</h1>
+          <p>
+            Press the home button at the top of the screen to play again!
+          </p>
+        </div>
+      </div>
+
 </body>
-<footer class="footer">
-  <div class="content has-text-centered">
-    <p>
-      Remember: You will guess the random word letter by letter. To guess a letter within the word,
-      select the letter from the table below then click where you think it will go in the word in one of the four squares. If you get the guessed letter wrong, your incorrect
-      guess number will increase. If you can get all four letters right, you win
-    </p>
-  </div>
-</footer>
 </html>
