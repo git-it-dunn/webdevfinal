@@ -1,4 +1,5 @@
-var word = "WORD";
+// var word = "WORD";
+var word;
 
 var lSel;
 
@@ -13,10 +14,11 @@ let numFail = 0;
 window.onload = function(){
     //auto mainpage creation
     document.getElementById("Fail").innerText = numFail;
+    getRandomWord();
     makingWordlboxes();
     makingKeyboard();
     togglePopup();
-    getRandomWord();
+    
 }
 
 
@@ -28,8 +30,9 @@ function getRandomWord(){
 
     let randomWordNumber = Math.floor((Math.random() * 30) + 1);
     console.log("random number is: " + randomWordNumber);
+    word = (wordList[randomWordNumber]).toUpperCase();
 
-    console.log(wordList[randomWordNumber]);
+    console.log(word);
 }
 
 
