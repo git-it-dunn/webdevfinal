@@ -1,3 +1,15 @@
+//setup for mongodb database
+const { MongoClient, ServerApiVersion } = require('mongodb');
+const uri = "mongodb+srv://admin:xRPEQom9cQb9DfGW@worl-cluster.qpg19ho.mongodb.net/?retryWrites=true&w=majority";
+// Create a MongoClient with a MongoClientOptions object to set the Stable API version
+const client = new MongoClient(uri, {
+  serverApi: {
+    version: ServerApiVersion.v1,
+    strict: true,
+    deprecationErrors: true,
+  }
+});
+
 // Import express. Supported by Node.js, lets us include modules in our project.
 let express = require('express');
 
@@ -60,3 +72,16 @@ app.get('/html/stats.html', (req, res) => {
 app.get('/html/group_members.html', (req, res) => {
     res.sendFile(__dirname + '/html/group_members.html');
 });
+
+app.get('/html/login.html', (req, res) => {
+    res.sendFile(__dirname + '/html/login.html');
+});
+
+app.get('/other_game/other_game.html', (req, res) => {
+    res.sendFile(__dirname + '/other_game/other_game.html');
+});
+
+app.post('/login', (req, res) => {
+    
+});
+
