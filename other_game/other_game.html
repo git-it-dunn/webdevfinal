@@ -5,45 +5,53 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="other_game.css">
-    <link rel="stylesheet" href="../stylesheets/mainpage.css" />
     <script src="other_game.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
     <title>Game</title>
 </head>
-<body onload="startGame()">
+<body>
+
+  <section class="hero is-success">
     <nav class="navbar is-transparent" role="navigation" aria-label="main navigation">
-        <div class="navbar-brand">
-          <a class="navbar-item" href="https://bulma.io">
-            <img src="https://ae01.alicdn.com/kf/HTB1cMumSFXXXXbbXVXXq6xXFXXXF/Wholesale-10cm-High-Wood-Wooden-Letters-A-to-Z-Alphabet-Birthday-Gift-Bridal-Wedding-Party-Home.jpg_640x640.jpg" width="112" height="28">
+      <div class="navbar-brand">
+        <a class="navbar-item" href="https://bulma.io">
+          <img src="https://ae01.alicdn.com/kf/HTB1cMumSFXXXXbbXVXXq6xXFXXXF/Wholesale-10cm-High-Wood-Wooden-Letters-A-to-Z-Alphabet-Birthday-Gift-Bridal-Wedding-Party-Home.jpg_640x640.jpg" width="112" height="28">
+        </a>
+    
+        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+        </a>
+      </div>
+
+      <div id="navbarBasicExample" class="navbar-menu">
+        <div class="navbar-start">
+          <a class="navbar-item" href="../html/mainpage.html">
+              Home
           </a>
-      
-          <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
+    
+          <a class="navbar-item" href="../html/wordsPage.html">
+              Word List
           </a>
+
+          <a class="navbar-item" href="../html/stats.html">
+              Stats
+          </a>
+
+          <a class="navbar-item" href="../html/group_members.html">
+            About Us
+          </a>
+
+          <a class="navbar-item" href="../other_game/other_game.html">
+            Aim Trainer Minigame!
+          </a>
+          
         </div>
+      </div>
+    </nav>
+  </section>
 
-        <div id="navbarBasicExample" class="navbar-menu">
-          <div class="navbar-start">
-            <a class="navbar-item" href="../html/mainpage.html">
-                Home
-            </a>
-      
-            <a class="navbar-item" href="../html/wordsPage.html">
-                Word List
-            </a>
+  <script>startGame();</script>
 
-            <a class="navbar-item" href="../html/stats.html">
-                Stats
-            </a>
 
-            <a class="navbar-item" href="../html/group_members.html">
-              About Us
-          </a>
-          </div>
-        </div>
-      </nav>
 
 </body>
 </html>
