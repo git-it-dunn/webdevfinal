@@ -102,3 +102,7 @@ function letterSel(){
     //     lSel.classList.add("letterSelect");
     // }
 }
+
+function togglePopup(){
+    document.getElementById("popup-1").classList.toggle("active");
+}
