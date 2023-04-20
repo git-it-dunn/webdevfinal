@@ -99,7 +99,7 @@ h2{
     left: 50%;
     transform:translate(-50%,-50%) scale(0);
     background: #fff;
-    width: 450px;
+    width: 550px;
     height: 300px;
     z-index: 2;
     text-align: center;
@@ -114,4 +114,10 @@ h2{
 .popup.active .content{
     transition: all 360ms ease-in-out;
     transform:translate(-50%,-50%) scale(1);
+}
+
+footer{
+    bottom: 0;
+    width: 100%;
+    position: absolute;
 }

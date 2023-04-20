@@ -66,29 +66,31 @@
       <br>
       <div id = "keyboard"></div>
 
-      <div class="popup" id="popup-1">
+      <div class="popup" id="popup1">
         <div class="overlay" onclick="togglePopup()"></div>
         <div class="content">
-          <div class="close-btn">&times;</div>
           <h1>Welcome!</h1>
           <p>
             How to play the game:
             <br>
-            You will try to guess the randomly chosen word in as little tries as possible. 
+            You will try to guess the randomly chosen word in as little tries as possible. You will guess the random word letter by letter. To guess a letter within the word,
+            select the letter from the table below then click where you think it will go in the word in one of the four squares. If you get the guessed letter wrong, your incorrect
+            guess number will increase. If you can get all four letters right, you win. Click anywhere off this popup to play!
 
           </p>
         </div>
       </div>
 
-      <div class="popup" id="popup-2">
+      <div class="popup" id="popup2">
         <div class="overlay" onclick="togglePopup()"></div>
         <div class="content">
-          <div class="close-btn">&times;</div>
           <h1>You Won!</h1>
           <p>
+            Definition of the word:
             <div class="tile">
               <div id="dict"></div>
             </div>
+            Press the home button at the top of the screen to play again!
           </p>
         </div>
       </div>
@@ -97,7 +99,9 @@
 <footer class="footer">
   <div class="content has-text-centered">
     <p>
-      Lets play Worl! (this is a footer for project / class info maybe)
+      Remember: You will guess the random word letter by letter. To guess a letter within the word,
+      select the letter from the table below then click where you think it will go in the word in one of the four squares. If you get the guessed letter wrong, your incorrect
+      guess number will increase. If you can get all four letters right, you win
     </p>
   </div>
 </footer>
