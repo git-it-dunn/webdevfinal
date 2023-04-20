@@ -87,3 +87,11 @@ app.get('/other_game/other_game.html', (req, res) => {
     res.sendFile(__dirname + '/other_game/other_game.html');
 });
 
+app.get('/other_game/other_game.css', (req, res) => {
+    res.sendFile(__dirname + '/other_game/other_game.html');
+});
+
+app.get('/other_game/other_game.js', (req, res) => {
+    res.sendFile(__dirname + '/other_game/other_game.html');
+});
+
